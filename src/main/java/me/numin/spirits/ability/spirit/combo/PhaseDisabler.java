@@ -11,5 +11,6 @@ public class PhaseDisabler implements Listener {
         Player phasePlayer = e.getPlayer();
         Phase phase = new Phase(phasePlayer);
         phase.disablePhase();
+        e.setCancelled(true);
     }
 }
