@@ -15,6 +15,7 @@ import org.bukkit.Location;
 import org.bukkit.Sound;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
+import org.bukkit.event.Listener;
 
 import java.util.ArrayList;
 
@@ -81,12 +82,12 @@ public class Phase extends SpiritAbility implements AddonAbility, ComboAbility {
             remove();
             return;
         }
-        if (player.isSneaking() && isPhased) {
-            playEffects();
-            resetGameMode();
-            remove();
-            return;
-        }
+    }
+
+    public void disablePhase() {
+        playEffects();
+        resetGameMode();
+        remove();
     }
 
     public void setGameMode() {
