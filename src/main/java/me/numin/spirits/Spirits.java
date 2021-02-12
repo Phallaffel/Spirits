@@ -2,7 +2,6 @@ package me.numin.spirits;
 
 import com.projectkorra.projectkorra.ProjectKorra;
 import com.projectkorra.projectkorra.ability.CoreAbility;
-import me.numin.spirits.ability.spirit.combo.PhaseDisabler;
 import me.numin.spirits.config.Config;
 import me.numin.spirits.listeners.Abilities;
 import me.numin.spirits.listeners.Passives;
@@ -16,7 +15,6 @@ public final class Spirits extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        getServer().getPluginManager().registerEvents(new PhaseDisabler(), this);
         plugin = this;
 
         new Config(this);

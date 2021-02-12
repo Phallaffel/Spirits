@@ -1,5 +1,6 @@
 package me.numin.spirits.listeners;
 
+import me.numin.spirits.ability.spirit.combo.Phase;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -33,6 +34,8 @@ public class Abilities implements Listener {
 
         Player player = event.getPlayer();
         BendingPlayer bPlayer = BendingPlayer.getBendingPlayer(player);
+        Phase phase = new Phase(player);
+        phase.endPhase();
 
         if (event.isCancelled() || bPlayer == null) {
             return;
